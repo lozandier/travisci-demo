@@ -4,5 +4,7 @@ node_js:
   - "10.0"
 deploy:
   provider: releases
-  api_key: 46a48bb7abaff900f2de1e431176cc4adc96c122 
   file: lib/apps.js
+  api_key: $GITHUB_OAUTH_TOKEN
+  on:
+      tags: true
